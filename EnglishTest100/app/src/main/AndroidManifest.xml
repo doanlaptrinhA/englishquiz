@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.son.englishtest100">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/quiz"
+        android:label="EnglishQuiz"
+        android:roundIcon="@mipmap/quiz"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Menu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Result"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Manual"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Test"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Random"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Level"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Rank"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Welcome"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6FF"
+    tools:context=".Test">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#38b6FF"
+        tools:ignore="MissingConstraints"
+        >
+        <TextView
+            android:id="@+id/textCauhoi"
+            android:layout_width="374dp"
+            android:layout_height="122dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/white"
+            android:textSize="25dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCauhoi"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/white"
+                android:padding="10dp"
+                android:text="A. "
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/white"
+                android:padding="10dp"
+                android:text="B. "
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/white"
+                android:padding="10dp"
+                android:text="C. "
+                android:textColor="@android:color/white"
+                android:textColorHighlight="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textColorLink="@android:color/white"
+                android:textSize="25dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/white"
+                android:padding="10dp"
+                android:text="D. "
+                android:textColor="@android:color/white"
+                android:textColorHighlight="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textColorLink="@android:color/white"
+                android:textSize="25dp" />
+
+        </RadioGroup>
+
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/remove"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp" />
+
+
+        <ImageView
+            android:id="@+id/buttonNext"
+            android:layout_width="69dp"
+            android:layout_height="68dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            app:srcCompat="@drawable/checkmark" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/textDokho"
+        android:layout_width="232dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:width="100dp"
+        android:fontFamily="@font/ravie"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSocauhoi"
+        android:layout_width="233dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:width="100dp"
+        android:height="43dp"
+        android:fontFamily="@font/ravie"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
