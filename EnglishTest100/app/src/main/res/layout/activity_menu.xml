@@ -10,7 +10,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
             android:id="@+id/Img"
@@ -19,15 +21,14 @@
             android:layout_gravity="center"
             android:src="@drawable/hoasen" />
 
-    <ImageView
-        android:id="@+id/buttonTest"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/Img"
-        android:src="@drawable/playbutton"
-        android:layout_centerHorizontal="true"
-        />
+        <ImageView
+            android:id="@+id/buttonTest"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/Img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/playbutton" />
 
         <TextView
             android:id="@+id/PlayText"
@@ -39,40 +40,40 @@
             android:text="Làm trắc nghiệm"
             android:textColor="@android:color/white"
             android:textSize="18dp" />
-    <ImageView
-        android:id="@+id/buttonRank"
-        android:src="@drawable/emblem"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/buttonTest"
- />
 
-    <ImageView
-        android:id="@+id/buttonReturnLogin"
-        android:src="@drawable/logout"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
-        android:layout_below="@id/buttonTest"
-        android:layout_alignParentRight="true" />
+        <ImageView
+            android:id="@+id/buttonRank"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/buttonTest"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/emblem"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/buttonmManual"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="305dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="45dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="30sp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRank" />
+        <ImageView
+            android:id="@+id/buttonReturnLogin"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/buttonTest"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/logout" />
+
+        <ImageView
+            android:id="@+id/buttonmManual"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="305dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="45dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="30sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRank" />
 
         <TextView
             android:id="@+id/AchiveText"

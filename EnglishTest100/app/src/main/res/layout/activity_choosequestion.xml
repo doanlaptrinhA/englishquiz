@@ -6,32 +6,108 @@
     android:layout_height="match_parent"
     android:background="#38b6ff"
     tools:context=".Random">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#38b6FF"
+        android:clickable="true">
 
-    <Button
-        android:id="@+id/buttonOk"
-        android:background="#ffffff"
-        android:layout_width="105dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginBottom="499dp"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/nextbtn"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:src="@drawable/previous"
+            android:padding="10dp"
+            android:layout_alignTop="@+id/Imglogo"
+            android:forceHasOverlappingRendering="false"
+            />
 
-    <Spinner
-        android:id="@+id/spinnerRandom"
-        style="@style/Widget.AppCompat.Spinner.DropDown"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="310dp"
-        android:layout_marginLeft="310dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="595dp"
-        android:popupBackground="#ffffff"
-        android:soundEffectsEnabled="true"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/Imglogo"
+            android:layout_width="match_parent"
+            android:layout_height="494dp"
+            android:layout_gravity="center"
+            android:src="@drawable/hoasen" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Imglogo"
+            android:layout_marginTop="-39dp">
+
+            <ImageView
+                android:id="@+id/buttonEasy"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10pt"
+                android:src="@drawable/nam" />
+
+            <TextView
+                android:id="@+id/txt5q"
+                android:layout_width="258dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Chọn 5 câu"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout1"
+            >
+            <ImageView
+                android:id="@+id/btn10q"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10pt"
+                android:src="@drawable/ten" />
+
+            <TextView
+                android:id="@+id/txt10q"
+                android:layout_marginTop="20dp"
+                android:layout_width="258dp"
+                android:layout_height="80dp"
+                android:text="Chọn 10 câu"
+                android:textSize="40dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+<!--    <Button-->
+<!--        android:id="@+id/buttonOk"-->
+<!--        android:background="#ffffff"-->
+<!--        android:layout_width="105dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="290dp"-->
+<!--        android:layout_marginBottom="499dp"-->
+<!--        android:textSize="30sp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerRandom"-->
+<!--        style="@style/Widget.AppCompat.Spinner.DropDown"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="310dp"-->
+<!--        android:layout_marginLeft="310dp"-->
+<!--        android:layout_marginEnd="35dp"-->
+<!--        android:layout_marginRight="35dp"-->
+<!--        android:layout_marginBottom="595dp"-->
+<!--        android:popupBackground="#ffffff"-->
+<!--        android:soundEffectsEnabled="true"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
