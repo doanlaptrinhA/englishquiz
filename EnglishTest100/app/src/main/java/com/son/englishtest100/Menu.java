@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Menu extends AppCompatActivity {
-    ImageView buttonTest, buttonRank, buttonReturnLogin, buttonManual;
+    ImageView buttonTest, buttonRank, buttonReturnLogin, buttonManual,buttonAccount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +19,9 @@ public class Menu extends AppCompatActivity {
 
         buttonTest = findViewById(R.id.buttonTest);
         buttonRank = findViewById(R.id.buttonRank);
-        buttonManual = findViewById(R.id.buttonmManual);
+        buttonManual = findViewById(R.id.buttonManual);
         buttonReturnLogin = findViewById(R.id.buttonReturnLogin);
-
+        buttonAccount = findViewById(R.id.buttonAccount);
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,5 +50,13 @@ public class Menu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        buttonAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menu.this,Result.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

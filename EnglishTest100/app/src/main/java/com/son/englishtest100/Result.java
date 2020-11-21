@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class Result extends AppCompatActivity {
     Button btnEnd;
+
     TextView textName, textLevel, textResult;
 
     @Override
@@ -36,6 +37,7 @@ public class Result extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
     public void RankedResult(){
         SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
