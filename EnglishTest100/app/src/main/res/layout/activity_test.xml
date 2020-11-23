@@ -13,15 +13,17 @@
         android:background="#38b6FF"
         tools:ignore="MissingConstraints"
         >
+
         <TextView
+            android:layout_below="@id/txtCauHoi"
             android:id="@+id/textCauhoi"
-            android:layout_width="374dp"
-            android:layout_height="122dp"
+            android:layout_width="357dp"
+            android:layout_height="135dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@android:color/white"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -40,7 +42,7 @@
                 android:text="A. "
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonB"
@@ -51,7 +53,7 @@
                 android:text="B. "
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonC"
@@ -64,7 +66,7 @@
                 android:textColorHighlight="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textColorLink="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonD"
@@ -77,21 +79,20 @@
                 android:textColorHighlight="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textColorLink="@android:color/white"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
         </RadioGroup>
 
 
-
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/cancelbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             app:srcCompat="@drawable/remove"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="23dp" />
+            android:layout_marginRight="10dp" />
 
 
         <ImageView
@@ -100,36 +101,65 @@
             android:layout_height="68dp"
             android:layout_below="@id/radioGroup"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="11dp"
-            app:srcCompat="@drawable/checkmark" />
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/checkmark"
+            tools:ignore="NotSibling" />
 
+        <TextView
+            android:id="@+id/txtDoKho"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:width="100dp"
+            android:text="Level:"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            android:layout_below="@id/cancelbutton"/>
+
+        <TextView
+            android:id="@+id/txtCauHoi"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDoKho"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:width="100dp"
+            android:height="43dp"
+            android:text="Question:"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_below="@id/cancelbutton"
+            android:id="@+id/textDokho"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/txtDoKho"
+            android:width="100dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textSocauhoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDokho"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtCauHoi"
+            android:width="100dp"
+            android:height="43dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints" />
     </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/textDokho"
-        android:layout_width="232dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:width="100dp"
-        android:fontFamily="@font/ravie"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textSocauhoi"
-        android:layout_width="233dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
-        android:width="100dp"
-        android:height="43dp"
-        android:fontFamily="@font/ravie"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

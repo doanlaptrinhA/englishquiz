@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/registerbackground"
+    android:background="#38b6FF"
     tools:context=".Register">
 
     <EditText
@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
         android:background="@null"
-        android:drawableStart="@drawable/name"
         android:ems="10"
         android:hint=" User name"
         android:inputType="textPersonName"
@@ -30,7 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:background="@null"
-        android:drawableStart="@drawable/user"
         android:ems="10"
         android:hint=" ID"
         android:inputType="textPersonName"
@@ -47,7 +45,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="63dp"
         android:background="@null"
-        android:drawableStart="@drawable/key"
         android:ems="10"
         android:hint=" Password"
         android:inputType="textPassword"
@@ -64,7 +61,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:background="@null"
-        android:drawableStart="@drawable/key2"
         android:ems="10"
         android:hint=" Confirm"
         android:inputType="textPassword"

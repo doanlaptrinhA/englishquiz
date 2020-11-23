@@ -36,9 +36,9 @@ public class Rank extends AppCompatActivity {
             }
         });
 
-//        listUser = new ArrayList<>();
-//        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listUser);
-//        listRank.setAdapter(adapter);
+        listUser = new ArrayList<>();
+        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listUser);
+        listRank.setAdapter(adapter);
 
         LoadHighScore();
     }

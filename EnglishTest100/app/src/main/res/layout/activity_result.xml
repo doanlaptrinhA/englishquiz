@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#38b6ff"
-    tools:context=".Result">
+    tools:context=".Instruction">
 
-    <Button
-        android:id="@+id/buttonEnd"
-        android:layout_width="225dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="60dp"
-        android:textSize="30sp"
-        android:text="Return"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
 
     <TextView
         android:id="@+id/textName"
@@ -26,11 +19,10 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/ravie"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textLevel"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_toRightOf="@id/textView6"
+        android:layout_below="@id/Img"/>
 
     <TextView
         android:id="@+id/textLevel"
@@ -39,11 +31,11 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/ravie"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textResult"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_toRightOf="@id/textView7"
+        android:layout_below="@id/textName"
+         />
 
     <TextView
         android:id="@+id/textResult"
@@ -52,65 +44,75 @@
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/ravie"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEnd"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_below="@id/textLevel"
+        android:layout_toRightOf="@id/textView8"/>
 
     <TextView
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:fontFamily="@font/ravie"
+        android:layout_marginTop="36dp"
+        android:text="Result"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+ />
+
+    <ImageView
+        android:layout_below="@id/textTitle"
+        android:id="@+id/Img"
+        android:layout_width="423dp"
+        android:layout_height="261dp"
+        android:layout_gravity="center"
+        android:src="@drawable/hoasen"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/ravie"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="16dp"
         android:text="Name:"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_below="@id/Img" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/ravie"
-        android:text="Level:"
-        android:textColor="#FFFFFF"
+    <Button
+        android:id="@+id/buttonEnd"
+        android:layout_width="225dp"
+        android:layout_height="73dp"
+        android:text="Return"
+        android:layout_marginTop="10dp"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textView8" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="155dp"
-        android:fontFamily="@font/ravie"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:text="Result:"
+        android:layout_below="@id/textView7"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="24dp"
+        android:layout_below="@id/textView6"
+        android:text="Level:"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+</RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,22 +15,23 @@
 
         <ImageView
             android:id="@+id/nextbtn"
-            android:layout_width="85dp"
-            android:layout_height="80dp"
-            android:src="@drawable/previous"
-            android:padding="10dp"
-            android:layout_alignTop="@+id/Imglogo"
+            android:layout_width="60dp"
+            android:layout_height="63dp"
             android:forceHasOverlappingRendering="false"
-            />
+            android:padding="10dp"
+            android:src="@drawable/previous" />
 
         <ImageView
             android:id="@+id/Imglogo"
-            android:layout_width="500dp"
-            android:layout_height="500dp"
+            android:layout_width="423dp"
+            android:layout_height="261dp"
             android:layout_gravity="center"
-            android:src="@drawable/hoasen" />
+            android:src="@drawable/hoasen"
+            android:layout_below="@id/nextbtn"/>
 
         <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,21 +40,21 @@
 
             <ImageView
                 android:id="@+id/buttonEasy"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10pt"
                 android:src="@drawable/one" />
 
             <TextView
                 android:id="@+id/txtone"
-                android:layout_marginTop="20dp"
-                android:layout_width="258dp"
-                android:layout_height="80dp"
+                android:layout_width="249dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:gravity="center_horizontal"
                 android:text="Mức độ dễ"
-                android:textSize="40dp"
                 android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="center_horizontal" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,21 +65,22 @@
             >
             <ImageView
                 android:id="@+id/buttonMedium"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10pt"
                 android:src="@drawable/hand" />
 
             <TextView
                 android:id="@+id/txttwo"
-                android:layout_marginTop="20dp"
-                android:layout_width="258dp"
-                android:layout_height="80dp"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="13dp"
+                android:gravity="center_horizontal"
                 android:text="Mức độ trung"
-                android:textSize="40dp"
                 android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="center_horizontal" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -88,21 +90,21 @@
             >
             <ImageView
                 android:id="@+id/buttonHard"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="10pt"
                 android:src="@drawable/three" />
 
             <TextView
                 android:id="@+id/txtthree"
-                android:layout_marginTop="20dp"
-                android:layout_width="258dp"
-                android:layout_height="80dp"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:gravity="center_horizontal"
                 android:text="Mức độ khó"
-                android:textSize="40dp"
                 android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="center_horizontal" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </RelativeLayout>

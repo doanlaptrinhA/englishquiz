@@ -14,20 +14,21 @@
 
         <ImageView
             android:id="@+id/Img"
-            android:layout_width="423dp"
+            android:layout_width="match_parent"
             android:layout_height="261dp"
+            android:layout_below="@id/layoutnew"
             android:layout_gravity="center"
-            android:src="@drawable/hoasen" />
+            android:src="@drawable/hoasen"
+            tools:ignore="NotSibling" />
 
-    <ImageView
-        android:id="@+id/buttonTest"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/Img"
-        android:src="@drawable/playbutton"
-        android:layout_centerHorizontal="true"
-        />
+        <ImageView
+            android:id="@+id/buttonTest"
+            android:layout_width="115dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/Img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/playbutton" />
 
         <TextView
             android:id="@+id/PlayText"
@@ -39,28 +40,28 @@
             android:text="Làm trắc nghiệm"
             android:textColor="@android:color/white"
             android:textSize="18dp" />
-    <ImageView
-        android:id="@+id/buttonRank"
-        android:src="@drawable/emblem"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/buttonTest"
- />
 
-    <ImageView
-        android:id="@+id/buttonReturnLogin"
-        android:src="@drawable/logout"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
-        android:layout_below="@id/buttonTest"
-        android:layout_alignParentRight="true" />
+        <ImageView
+            android:id="@+id/buttonRank"
+            android:layout_width="103dp"
+            android:layout_height="91dp"
+            android:layout_below="@id/buttonTest"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/emblem"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+        <ImageView
+            android:id="@+id/buttonReturnLogin"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
+            android:layout_below="@id/buttonTest"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="42dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/logout" />
+
+        <ImageView
         android:id="@+id/buttonmManual"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="305dp"
@@ -76,11 +77,11 @@
 
         <TextView
             android:id="@+id/AchiveText"
-            android:layout_width="139dp"
-            android:layout_height="36dp"
+            android:layout_width="89dp"
+            android:layout_height="37dp"
             android:layout_below="@id/buttonRank"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="2dp"
             android:text="Điểm cao"
             android:textColor="@android:color/white"
@@ -93,10 +94,45 @@
             android:layout_below="@id/buttonReturnLogin"
             android:layout_alignParentRight="true"
             android:layout_marginTop="2dp"
-            android:layout_marginRight="20dp"
             android:text="Thoát"
-
+            android:layout_marginRight="17dp"
             android:textColor="@android:color/white"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutnew"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/QuestionButton"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/question"
+            tools:ignore="ContentDescription,MissingConstraints,NotSibling,UnknownId"
+            android:layout_marginStart="7dp" />
+
+        <ImageView
+            android:id="@+id/AccountButton"
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="7dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/account"
+            tools:ignore="NotSibling,RtlHardcoded" />
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

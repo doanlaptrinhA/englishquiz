@@ -28,7 +28,6 @@ public class Result extends AppCompatActivity {
         final Bundle packageFromCaller= callerIntent.getBundleExtra("MyPackage");
         RankedResult();
         textResult.setText(packageFromCaller.getInt("KQ")+"/"+ packageFromCaller.getInt("Socau"));
-
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

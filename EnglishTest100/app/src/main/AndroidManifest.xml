@@ -38,6 +38,9 @@
             android:name=".Rank"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".Instruction"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".Welcome"
             android:screenOrientation="portrait">
             <intent-filter>

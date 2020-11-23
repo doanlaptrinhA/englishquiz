@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Menu extends AppCompatActivity {
-    ImageView buttonTest, buttonRank, buttonReturnLogin, buttonManual;
+    ImageView buttonTest, buttonRank, buttonReturnLogin, buttonManual, QuestionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Menu extends AppCompatActivity {
         buttonRank = findViewById(R.id.buttonRank);
         buttonManual = findViewById(R.id.buttonmManual);
         buttonReturnLogin = findViewById(R.id.buttonReturnLogin);
+        QuestionButton= findViewById(R.id.QuestionButton);
 
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +39,7 @@ public class Menu extends AppCompatActivity {
         buttonManual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Menu.this,Manual.class);
+                Intent intent = new Intent(Menu.this,Rank.class);
                 startActivity(intent);
             }
         });
@@ -46,6 +47,13 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Menu.this,Welcome.class);
+                startActivity(intent);
+            }
+        });
+        QuestionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menu.this,Instruction.class);
                 startActivity(intent);
             }
         });

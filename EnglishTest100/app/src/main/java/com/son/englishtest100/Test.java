@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -18,7 +19,7 @@ public class Test extends AppCompatActivity{
     TextView textDokho, textSocauhoi, textCauhoi;
     RadioGroup RG;
     RadioButton optA, optB, optC, optD;
-    Button  nextBtn;
+    ImageView nextBtn;
     ArrayList<Question> test = new ArrayList<>();
     int pos=0;
     int ketqua = 0;
@@ -48,7 +49,6 @@ public class Test extends AppCompatActivity{
 
 //        LoadHighScore();
         Display(pos);
-
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
