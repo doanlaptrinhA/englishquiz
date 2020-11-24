@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         LoginButton = findViewById(R.id.buttonLogin);
         RegisterButton = findViewById(R.id.buttonToRegister);
 
-        Data = new Database(this,"Data.sqlite",null,1);
+        Data = new Database(this,"Data.sqlite",null,2);
 //        Data.QueryData("DROP TABLE User");
         Data.QueryData("CREATE TABLE IF NOT EXISTS User(STT INTEGER PRIMARY KEY AUTOINCREMENT, ID STRING, Password STRING, Name STRING)");
         Data.QueryData("INSERT INTO User(ID,Password,Name) VALUES ('111','111','Vỹ')");
