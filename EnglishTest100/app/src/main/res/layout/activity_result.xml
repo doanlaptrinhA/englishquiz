@@ -49,25 +49,26 @@
         android:layout_below="@id/textLevel"
         android:layout_toRightOf="@id/textView8"/>
 
+
     <TextView
+        android:layout_below="@id/Img"
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+
         android:text="Result"
         android:textColor="#FFFFFF"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
- />
-
+        android:layout_centerHorizontal="true" />
     <ImageView
-        android:layout_below="@id/textTitle"
         android:id="@+id/Img"
         android:layout_width="423dp"
-        android:layout_height="261dp"
+        android:layout_height="361dp"
+
         android:layout_gravity="center"
-        android:src="@drawable/hoasen"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/hsen6"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -80,16 +81,19 @@
         android:text="Name:"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:layout_below="@id/Img" />
+        android:layout_below="@id/textTitle" />
 
     <Button
         android:id="@+id/buttonEnd"
-        android:layout_width="225dp"
-        android:layout_height="73dp"
-        android:text="Return"
-        android:layout_marginTop="10dp"
-        android:textSize="30sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonred"
+        android:text="Return"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
         android:layout_below="@id/textView8" />
 
     <TextView

@@ -25,22 +25,22 @@ public class Choose extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        txt5q.setOnTouchListener (new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Choose.this,R.raw.music2);
-                mp.start();
-                return false;
-            }
-        });
-
-        txt10q.setOnTouchListener (new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Choose.this,R.raw.music2);
-                mp.start();
-                return false;
-            }
-        });
+//        txt5q.setOnTouchListener (new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                MediaPlayer mp = MediaPlayer.create(Choose.this,R.raw.music2);
+//                mp.start();
+//                return false;
+//            }
+//        });
+//
+//        txt10q.setOnTouchListener (new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                MediaPlayer mp = MediaPlayer.create(Choose.this,R.raw.music2);
+//                mp.start();
+//                return false;
+//            }
+//        });
     }
 }

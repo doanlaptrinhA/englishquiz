@@ -13,9 +13,10 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:layout_marginTop="10dp"
             android:id="@+id/Img"
-            android:layout_width="423dp"
-            android:layout_height="261dp"
+            android:layout_width="523dp"
+            android:layout_height="361dp"
             android:layout_gravity="center"
             android:src="@drawable/hoasen" />
 
@@ -29,13 +30,16 @@
             android:layout_below="@id/Img"
             app:cardUseCompatPadding="true"
             app:cardElevation="7dp"
-            app:cardBackgroundColor="#ffffff"
+            app:cardBackgroundColor="#38b6FF"
             app:cardCornerRadius="20dp"
             >
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="258dp"
+                android:layout_height="305dp"
+                android:layout_marginLeft="15dp"
+
+                android:background="#38b6FF"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -44,10 +48,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    android:paddingTop="5dp"
-                    android:text="Tên tài khoản"
+                    android:text="Username"
                     android:textColor="#366ce0"
-                    android:textSize="20sp"
+                    android:textSize="28sp"
                     android:textStyle="bold">
 
                 </androidx.appcompat.widget.AppCompatTextView>
@@ -55,12 +58,13 @@
                 <EditText
                     android:id="@+id/editTextID"
                     android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:background="#9AD2F3"
-                    android:hint="Hãy nhập tên tài khoản"
+                    android:background="#FFFFFF"
+                    android:hint="Enter your username"
                     android:inputType="textPersonName"
+                    android:paddingLeft="10dp"
                     android:textSize="25dp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -69,44 +73,49 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    android:paddingTop="5dp"
-                    android:text="Mật khẩu"
+                    android:layout_marginTop="8dp"
+                    android:text="Password"
                     android:textColor="#366ce0"
-                    android:textSize="20sp"
-                    android:textStyle="bold">
-                </androidx.appcompat.widget.AppCompatTextView>
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+
+                    ></androidx.appcompat.widget.AppCompatTextView>
 
                 <EditText
                     android:id="@+id/editTextTextPassword"
                     android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:background="#9AD2F3"
-                    android:hint="Hãy nhập mật khẩu"
+                    android:background="#FFFFFF"
+                    android:hint="Enter your password"
                     android:inputType="textPersonName"
+                    android:paddingLeft="10dp"
                     android:textSize="25dp" />
 
                 <Button
                     android:id="@+id/buttonLogin"
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/buttonred"
                     android:text="Login"
-                    android:textColor="#ffffff" />
+                    android:background="@drawable/buttonstyle"
+                    android:textColor="#38b6FF"
+                    android:textStyle="bold"
+                    android:textSize="18dp" />
 
-                <Button
+                <TextView
                     android:id="@+id/buttonToRegister"
-                    android:layout_width="95dp"
-                    android:layout_height="26dp"
+                    android:layout_width="150dp"
+                    android:layout_height="46dp"
                     android:layout_gravity="end"
+                    android:layout_marginTop="6dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/buttonsignup"
-                    android:text="Register"
-                    android:textColor="#ffffff" />
+
+                    android:text="Register now"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/ErrorConfirm"

@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -27,7 +31,8 @@ public class Test extends AppCompatActivity{
     int pos=0;
     int ketqua = 0;
     int HighScore=0;
-
+    SoundPool soundPool;
+    private static MediaPlayer MediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,10 +88,11 @@ public class Test extends AppCompatActivity{
             }
         });
 
+
         optA.setOnTouchListener (new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.testclick);
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
                 mp.start();
                 return false;
             }
@@ -94,7 +100,7 @@ public class Test extends AppCompatActivity{
         optB.setOnTouchListener (new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.testclick);
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
                 mp.start();
                 return false;
             }
@@ -102,7 +108,7 @@ public class Test extends AppCompatActivity{
         optC.setOnTouchListener (new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.testclick);
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
                 mp.start();
                 return false;
             }
@@ -110,7 +116,7 @@ public class Test extends AppCompatActivity{
         optD.setOnTouchListener (new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.testclick);
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
                 mp.start();
                 return false;
             }
@@ -118,13 +124,13 @@ public class Test extends AppCompatActivity{
         nextBtn.setOnTouchListener (new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.next);
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
                 mp.start();
                 return false;
             }
         });
-    }
 
+    }
     void Display(int i){
         textCauhoi.setText(test.get(i).CauHoi);
         optA.setText(test.get(i).AnswerA);

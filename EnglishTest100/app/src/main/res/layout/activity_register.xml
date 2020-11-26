@@ -7,141 +7,182 @@
     android:background="#38b6FF"
     tools:context=".Register">
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
-        android:background="@null"
-        android:ems="10"
-        android:hint=" User name"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <EditText
-        android:id="@+id/editTextID"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="@null"
-        android:ems="10"
-        android:hint=" ID"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:text="Register"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
-        android:background="@null"
-        android:ems="10"
-        android:hint=" Password"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextID" />
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint=" User name"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/editTextConfirm"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="@null"
-        android:ems="10"
-        android:hint=" Confirm"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        <EditText
+            android:background="#FFFFFF"
+            android:id="@+id/editTextID"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
 
-    <Button
-        android:id="@+id/buttonRegister"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="338dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextConfirm" />
+            android:ems="10"
+            android:hint=" ID"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
-    <Button
-        android:id="@+id/buttonToLogin"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="81dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginLeft="268dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.594"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextID" />
 
-    <TextView
-        android:id="@+id/ErrorConfirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editTextConfirm"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint=" Confirm"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
-    <TextView
-        android:id="@+id/ErrorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="227dp"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/buttonRegister"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="250dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/editTextConfirm"
 
-    <TextView
-        android:id="@+id/ErrorID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="331dp"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:background="@drawable/buttonred"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirm" />
 
-    <TextView
-        android:id="@+id/ErrorPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="447dp"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/buttonToLogin"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="250dp"
+            android:layout_height="72dp"
+            android:layout_below="@id/buttonRegister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonred"
+            android:text="Return Login"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirm"
 
+            />
+
+        <TextView
+            android:id="@+id/ErrorConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="520dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ErrorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="212dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ErrorID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="331dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ErrorPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="447dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
