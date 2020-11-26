@@ -22,8 +22,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:background="@android:color/white"
-            android:textSize="15dp" />
+            android:background="@null"
+            android:textSize="33dp"
+            android:textColor="#ffffff"
+            />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -42,7 +44,7 @@
                 android:text="A. "
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="15dp" />
+                android:textSize="27dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonB"
@@ -53,7 +55,7 @@
                 android:text="B. "
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="15dp" />
+                android:textSize="27dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonC"
@@ -66,7 +68,7 @@
                 android:textColorHighlight="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textColorLink="@android:color/white"
-                android:textSize="15dp" />
+                android:textSize="27dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonD"
@@ -79,57 +81,57 @@
                 android:textColorHighlight="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textColorLink="@android:color/white"
-                android:textSize="15dp" />
+                android:textSize="27dp" />
 
         </RadioGroup>
 
 
         <ImageView
             android:id="@+id/cancelbutton"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/remove"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/remove" />
 
 
         <ImageView
             android:id="@+id/buttonNext"
-            android:layout_width="69dp"
-            android:layout_height="68dp"
+            android:layout_width="95dp"
+            android:layout_height="82dp"
             android:layout_below="@id/radioGroup"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
             app:srcCompat="@drawable/checkmark"
             tools:ignore="NotSibling" />
 
         <TextView
             android:id="@+id/txtDoKho"
-            android:layout_width="78dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:width="100dp"
+
             android:text="Level:"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:textSize="15dp"
+            android:textSize="30dp"
             android:layout_below="@id/cancelbutton"/>
 
         <TextView
             android:id="@+id/txtCauHoi"
-            android:layout_width="115dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtDoKho"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:width="100dp"
-            android:height="43dp"
+            android:textStyle="bold"
             android:text="Question:"
             android:textColor="#FFFFFF"
-            android:textSize="15dp"
+            android:textSize="30dp"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -140,9 +142,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtDoKho"
-            android:width="100dp"
+
             android:textColor="#FFFFFF"
-            android:textSize="15dp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textSocauhoi"
@@ -152,10 +154,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/txtCauHoi"
-            android:width="100dp"
-            android:height="43dp"
+
             android:textColor="#FFFFFF"
-            android:textSize="15dp"
+            android:textSize="30dp"
             tools:ignore="MissingConstraints" />
     </RelativeLayout>
 
