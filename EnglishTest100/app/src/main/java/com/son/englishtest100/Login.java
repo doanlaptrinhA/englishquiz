@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,8 +17,8 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
     EditText id, password;
-    TextView Error;
-    Button LoginButton, RegisterButton;
+    TextView Error,RegisterButton;
+    Button LoginButton;
     public Database Data;
     String checkedID=null, checkedPassword=null, name=null,Username;
 
@@ -63,6 +65,14 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Login.this,Register.class);
                 startActivity(intent);
+            }
+        });
+        LoginButton.setOnTouchListener (new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer mp = MediaPlayer.create(Login.this,R.raw.music1);
+                mp.start();
+                return false;
             }
         });
     }
