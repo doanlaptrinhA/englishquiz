@@ -22,17 +22,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Test extends AppCompatActivity{
+public class Test extends AppCompatActivity {
     TextView textDokho, textSocauhoi, textCauhoi;
     RadioGroup RG;
     RadioButton optA, optB, optC, optD;
     ImageView nextBtn;
     ArrayList<Question> test = new ArrayList<>();
-    int pos=0;
+    int pos = 0;
     int ketqua = 0;
-    int HighScore=0;
+    int HighScore = 0;
     SoundPool soundPool;
     private static MediaPlayer MediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +76,7 @@ public class Test extends AppCompatActivity{
                         break;
                 }
                 pos++;
-                if (pos >= test.size() ){
+                if (pos >= test.size()) {
                     Intent intent = new Intent(Test.this, Result.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("KQ", ketqua);
@@ -89,49 +90,50 @@ public class Test extends AppCompatActivity{
         });
 
 
-        optA.setOnTouchListener (new View.OnTouchListener() {
+        optA.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                MediaPlayer mp = MediaPlayer.create(Test.this, R.raw.click);
                 mp.start();
                 return false;
             }
         });
-        optB.setOnTouchListener (new View.OnTouchListener() {
+        optB.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                MediaPlayer mp = MediaPlayer.create(Test.this, R.raw.click);
                 mp.start();
                 return false;
             }
         });
-        optC.setOnTouchListener (new View.OnTouchListener() {
+        optC.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                MediaPlayer mp = MediaPlayer.create(Test.this, R.raw.click);
                 mp.start();
                 return false;
             }
         });
-        optD.setOnTouchListener (new View.OnTouchListener() {
+        optD.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                MediaPlayer mp = MediaPlayer.create(Test.this, R.raw.click);
                 mp.start();
                 return false;
             }
         });
-        nextBtn.setOnTouchListener (new View.OnTouchListener() {
+        nextBtn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                MediaPlayer mp = MediaPlayer.create(Test.this, R.raw.click);
                 mp.start();
                 return false;
             }
         });
 
     }
-    void Display(int i){
+
+    void Display(int i) {
         textCauhoi.setText(test.get(i).CauHoi);
         optA.setText(test.get(i).AnswerA);
         optB.setText(test.get(i).AnswerB);
@@ -152,4 +154,6 @@ public class Test extends AppCompatActivity{
 ////        editor.putInt("H",HighScore);
 ////        editor.apply();
 //    }
+
+
 }

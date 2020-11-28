@@ -2,7 +2,9 @@ package com.son.englishtest100;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -31,7 +33,7 @@ public class Random extends AppCompatActivity{
         click10q = findViewById(R.id.txt10q);
 
         Intent callerIntent = getIntent();
-        Bundle bundle = callerIntent.getBundleExtra("QuestionList");
+        final Bundle bundle = callerIntent.getBundleExtra("QuestionList");
         final ArrayList<Question> listQuestion = (ArrayList<Question>) bundle.getSerializable("ArrayList");
         level = callerIntent.getStringExtra("level");
 
@@ -43,8 +45,11 @@ public class Random extends AppCompatActivity{
                 Bundle dataTest = new Bundle();
                 randomQuestion = getRandom(listQuestion,5,item);
                 sendData(level,"5",randomQuestion,intent,array,dataTest);
+                sendDataResult(level);
             }
         });
+
+
         click10q.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +58,7 @@ public class Random extends AppCompatActivity{
                 Bundle dataTest = new Bundle();
                 randomQuestion = getRandom(listQuestion,10,item);
                 sendData(level,"10",randomQuestion,intent,array,dataTest);
+                sendDataResult(level);
             }
         });
     }
@@ -67,6 +73,8 @@ public class Random extends AppCompatActivity{
         }
         return randomQuestion;
     }
+
+
     public void sendData(String level, String soCauHoi, ArrayList<Question> randomQuestion,Intent intent, Bundle bundle1, Bundle bundle2){
         bundle1.putSerializable("RandomArrayList",(Serializable)randomQuestion);
         bundle2.putString("level",level);
@@ -75,15 +83,13 @@ public class Random extends AppCompatActivity{
         intent.putExtra("RandomQuestionList",bundle1);
         startActivity(intent);
     }
-//    public  void createDropdown(ArrayList number, Spinner spinnerRandom){
-//        number.add("5");
-//        number.add("6");
-//        number.add("7");
-//        number.add("8");
-//        number.add("9");
-//        number.add("10");
-//        ArrayAdapter<String> adapternumber = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, number);
-//        adapternumber.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
-//        spinnerRandom.setAdapter(adapternumber);
-//    }
+
+
+    public void sendDataResult(String level){
+        SharedPreferences sharedPreferences = getSharedPreferences("LevelData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("LevelResult",level);
+        editor.apply();
+    }
+
 }
