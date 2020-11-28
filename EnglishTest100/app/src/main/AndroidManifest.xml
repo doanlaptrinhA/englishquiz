@@ -18,7 +18,10 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Menu"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Level"
+
+            />
         <activity
             android:name=".Result"
             android:screenOrientation="portrait"/>
@@ -33,7 +36,9 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Level"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+
+            />
         <activity
             android:name=".Rank"
             android:screenOrientation="portrait"/>

@@ -17,12 +17,13 @@ public class Level extends AppCompatActivity{
     ImageView buttonEasy, buttonMedium, buttonHard;
     TextView txtone,txttwo,txtthree;
     Database Data;
+    ImageView nextbtn;
     ArrayList<Question> easylist, mediumlist, hardlist;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
-
+        nextbtn = findViewById(R.id.nextbtn);
         buttonEasy = findViewById(R.id.buttonEasy);
         buttonMedium = findViewById(R.id.buttonMedium);
         buttonHard = findViewById(R.id.buttonHard);
@@ -199,6 +200,14 @@ public class Level extends AppCompatActivity{
                 getListByLevel(3,hardlist);
                 sendData("Hard",hardlist,intent,bundle);
             }
+        });
+        nextbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Level.this,Menu.class);
+                startActivity(intent);
+            }
+
         });
     }
 

@@ -17,8 +17,8 @@
         <TextView
             android:layout_below="@id/txtCauHoi"
             android:id="@+id/textCauhoi"
-            android:layout_width="357dp"
-            android:layout_height="135dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
@@ -88,8 +88,8 @@
 
         <ImageView
             android:id="@+id/cancelbutton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
