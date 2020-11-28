@@ -26,7 +26,7 @@ public class Test extends AppCompatActivity {
     TextView textDokho, textSocauhoi, textCauhoi;
     RadioGroup RG;
     RadioButton optA, optB, optC, optD;
-    ImageView nextBtn;
+    ImageView nextBtn,cancel;
     ArrayList<Question> test = new ArrayList<>();
     int pos = 0;
     int ketqua = 0;
@@ -47,7 +47,15 @@ public class Test extends AppCompatActivity {
         optB = findViewById(R.id.radioButtonB);
         optC = findViewById(R.id.radioButtonC);
         optD = findViewById(R.id.radioButtonD);
+        cancel=findViewById(R.id.cancelbutton);
+        cancel.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Test.this,Menu.class);
+                startActivity(intent);
+            }
 
+        });
         textDokho.setText(getIntent().getBundleExtra("dataTest").getString("level"));
         textSocauhoi.setText(getIntent().getBundleExtra("dataTest").getString("soCauHoi"));
 
