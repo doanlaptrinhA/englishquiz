@@ -2,7 +2,9 @@ package com.son.englishtest100;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioAttributes;
@@ -26,7 +28,7 @@ public class Test extends AppCompatActivity {
     TextView textDokho, textSocauhoi, textCauhoi;
     RadioGroup RG;
     RadioButton optA, optB, optC, optD;
-    ImageView nextBtn;
+    ImageView nextBtn,cancel;
     ArrayList<Question> test = new ArrayList<>();
     int pos = 0;
     int ketqua = 0;
@@ -47,6 +49,42 @@ public class Test extends AppCompatActivity {
         optB = findViewById(R.id.radioButtonB);
         optC = findViewById(R.id.radioButtonC);
         optD = findViewById(R.id.radioButtonD);
+        cancel=findViewById(R.id.cancelbutton);
+
+        final MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.music2);
+        mp.start();
+        mp.setLooping(true);
+
+        cancel.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                final AlertDialog.Builder builder = new AlertDialog.Builder(Test.this);
+                builder.setTitle("Exit");
+                builder.setMessage("Do you want to exit ??");
+                builder.setPositiveButton("Yes. Exit now!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mp.reset();
+                        mp.stop();
+                        Intent intent = new Intent(Test.this,Menu.class);
+                        startActivity(intent);
+                    }
+                });
+
+                builder.setNegativeButton("Not now", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        dialogInterface.dismiss();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+
+        });
 
         textDokho.setText(getIntent().getBundleExtra("dataTest").getString("level"));
         textSocauhoi.setText(getIntent().getBundleExtra("dataTest").getString("soCauHoi"));
@@ -77,15 +115,17 @@ public class Test extends AppCompatActivity {
                 }
                 pos++;
                 if (pos >= test.size()) {
+                    mp.stop();
                     Intent intent = new Intent(Test.this, Result.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("KQ", ketqua);
                     bundle.putInt("Socau", pos);
                     intent.putExtra("MyPackage", bundle);
                     startActivity(intent);
-
                     finish();
-                } else Display(pos);
+                } else {
+                    Display(pos);
+                }
             }
         });
 

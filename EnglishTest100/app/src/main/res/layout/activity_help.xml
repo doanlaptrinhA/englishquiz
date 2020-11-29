@@ -7,55 +7,135 @@
     android:background="#ffffff"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rela_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
 
         <ImageView
-            android:id="@+id/next"
-            android:layout_width="86dp"
-            android:layout_height="85dp"
+            android:id="@+id/nextbtn"
+            android:layout_width="91dp"
+            android:layout_height="87dp"
             android:padding="10dp"
             android:src="@drawable/previous" />
-        <ImageView
-            android:layout_below="@id/next"
-            android:id="@+id/Tutorial"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
 
-            android:scaleType="centerInside"
+        <TextView
+            android:id="@+id/Tutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nextbtn"
             android:layout_centerInParent="true"
+            android:padding="5dp"
             android:src="@drawable/hdsd"
-            android:layout_gravity="center_horizontal" />
+            android:text="Intrustion"
+            android:textColor="#38b6FF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Dautien"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Tutorial"
-            android:padding="5dp"
-            android:text="Đầu tiên sau khi khởi động ứng dụng thì ........................................................................................................................................................................................................"
-            android:textColor="#38B6FF"
-            android:textSize="18dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            />
+            android:layout_below="@id/Tutorial"
+            android:padding="5dp"
+            android:text="When you start the application, they have the following functions:"
+            android:textColor="#38B6FF"
+            android:textSize="18dp" />
 
         <ImageView
             android:id="@+id/Img2"
-            android:layout_width="453dp"
-            android:layout_height="200dp"
+            android:layout_width="700dp"
+            android:layout_height="400dp"
             android:layout_below="@+id/Dautien"
             android:layout_marginTop="30dp"
             android:padding="5dp"
-            android:src="@drawable/img1" />
+            android:src="@drawable/new_help" />
 
+        <TextView
+            android:id="@+id/Help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/Img2"
+            android:padding="5dp"
+            android:text="+ At button 1, you can see the instructions for use \n + At button 2, you can view personal information and log out at any time "
+            android:textColor="#38B6FF"
+            android:textSize="18dp" />
 
+        <ImageView
+            android:id="@+id/help_account"
+            android:layout_width="700dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/Help"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:src="@drawable/help_four" />
+        <TextView
+            android:id="@+id/Help2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/help_account"
+            android:padding="5dp"
+            android:text="+ At button 3, you can choose the level, number of questions and take a quiz  "
+            android:textColor="#38B6FF"
+            android:textSize="18dp" />
+        <ImageView
+            android:id="@+id/help_play"
+            android:layout_width="700dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/Help2"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:src="@drawable/help_two" />
+        <TextView
+            android:id="@+id/Help3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/help_play"
+            android:padding="5dp"
+            android:text="+ At button 4, you can see the ranking of the accounts with the highest scores"
+            android:textColor="#38B6FF"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/help_rank"
+            android:layout_width="700dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/Help3"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:src="@drawable/help_three" />
+        <TextView
+            android:id="@+id/Help4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/help_rank"
+            android:padding="5dp"
+            android:text="+ Finally, button 5 is the exit button of the application"
+            android:textColor="#38B6FF"
+            android:textSize="18dp" />
     </RelativeLayout>
 
 
+
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

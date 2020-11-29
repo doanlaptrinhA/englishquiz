@@ -7,13 +7,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Random extends AppCompatActivity{
     ArrayList<Question> listQuestion = new ArrayList<>();
@@ -23,6 +25,7 @@ public class Random extends AppCompatActivity{
     ArrayList<String> number = new ArrayList<String>();
     Question item;
     String level;
+    ImageView nextbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -31,6 +34,16 @@ public class Random extends AppCompatActivity{
 
         click5q =  findViewById(R.id.txt5q);
         click10q = findViewById(R.id.txt10q);
+        nextbtn = findViewById(R.id.nextbtn);
+
+        nextbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Random.this,Level.class);
+                startActivity(intent);
+            }
+
+        });
 
         Intent callerIntent = getIntent();
         final Bundle bundle = callerIntent.getBundleExtra("QuestionList");
@@ -66,11 +79,21 @@ public class Random extends AppCompatActivity{
     public  static ArrayList  getRandom(ArrayList<Question> listQuestion,int number, Question item){
         java.util.Random random = new java.util.Random();
         ArrayList<Question> randomQuestion = new ArrayList<>();
-
         for(int i=0; i<number;i++){
+            Collections.shuffle(listQuestion);
             item = listQuestion.get(random.nextInt(number));
+            String a = item.AnswerA;
+            String b = item.AnswerB;
+            String c = item.AnswerC;
+            String d = item.AnswerD;
+            String [] ans = {a,b,c,d};
+            Collections.shuffle(Arrays.asList(ans));
             randomQuestion.add(item);
-        }
+            if(randomQuestion.equals(randomQuestion))
+            {
+                randomQuestion.remove(randomQuestion);
+            }
+            }
         return randomQuestion;
     }
 

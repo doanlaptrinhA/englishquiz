@@ -2,7 +2,9 @@ package com.son.englishtest100;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -18,11 +20,13 @@ public class Level extends AppCompatActivity{
     TextView txtone,txttwo,txtthree;
     Database Data;
     ArrayList<Question> easylist, mediumlist, hardlist;
+    ImageView nextbtn;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
 
+        nextbtn = findViewById(R.id.nextbtn);
         buttonEasy = findViewById(R.id.buttonEasy);
         buttonMedium = findViewById(R.id.buttonMedium);
         buttonHard = findViewById(R.id.buttonHard);
@@ -169,7 +173,14 @@ public class Level extends AppCompatActivity{
             }
         });
 
+        nextbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Level.this,Menu.class);
+                startActivity(intent);
+            }
 
+        });
         txtone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -217,5 +228,4 @@ public class Level extends AppCompatActivity{
         intent.putExtra("QuestionList",bundle);
         startActivity(intent);
     }
-
 }
