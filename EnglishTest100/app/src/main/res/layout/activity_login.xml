@@ -8,38 +8,26 @@
     tools:context=".Login">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_marginTop="10dp"
             android:id="@+id/Img"
-            android:layout_width="523dp"
-            android:layout_height="361dp"
+            android:layout_width="336dp"
+            android:layout_height="272dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/hoasen" />
 
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/card2"
-            android:visibility="visible"
-            android:layout_marginTop="2dp"
-            android:layout_below="@id/Img"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="7dp"
-            app:cardBackgroundColor="#38b6FF"
-            app:cardCornerRadius="20dp"
-            >
-
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="305dp"
-                android:layout_marginLeft="15dp"
-
+                android:layout_below="@id/Img"
+                android:layout_height="wrap_content"
                 android:background="#38b6FF"
+                android:layout_centerHorizontal="true"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -57,9 +45,10 @@
 
                 <EditText
                     android:id="@+id/editTextID"
-                    android:layout_width="300dp"
+                    android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:background="#FFFFFF"
                     android:hint="Enter your username"
@@ -83,9 +72,10 @@
 
                 <EditText
                     android:id="@+id/editTextTextPassword"
-                    android:layout_width="300dp"
+                    android:layout_width="320dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:background="#FFFFFF"
                     android:hint="Enter your password"
@@ -98,21 +88,20 @@
                     android:layout_width="200dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:text="Login"
+                    android:layout_marginTop="23dp"
                     android:background="@drawable/buttonstyle"
+                    android:text="Login"
                     android:textColor="#38b6FF"
-                    android:textStyle="bold"
-                    android:textSize="18dp" />
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/buttonToRegister"
                     android:layout_width="150dp"
                     android:layout_height="46dp"
                     android:layout_gravity="end"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginRight="20dp"
-
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:text="Register now"
                     android:textColor="#ffffff"
                     android:textSize="25dp" />
@@ -124,15 +113,12 @@
                     android:layout_marginTop="637dp"
                     android:textColor="#E80000"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                     />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-        </androidx.cardview.widget.CardView>
+
 
 
     </RelativeLayout>
