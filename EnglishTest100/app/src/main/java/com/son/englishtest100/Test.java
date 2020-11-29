@@ -2,14 +2,17 @@ package com.son.englishtest100;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+
 import android.content.Intent;
+<<<<<<< HEAD
+=======
 import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
+>>>>>>> a31e62659ed9602e198558efbfa76878dc7f3ad1
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,9 +38,11 @@ public class Test extends AppCompatActivity {
     private static MediaPlayer MediaPlayer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+
         textDokho = findViewById(R.id.textDokho);
         textSocauhoi = findViewById(R.id.textSocauhoi);
         textCauhoi = findViewById(R.id.textCauhoi);

@@ -2,22 +2,26 @@ package com.son.englishtest100;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
     EditText name, id, password, confirmpassword;
     TextView ErrorName, ErrorID, ErrorPassword, ErrorConfirm;
     Button registerButton, toLoginButton;
-    Database Data;
+    public Database Data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +37,14 @@ public class Register extends AppCompatActivity {
         registerButton = findViewById(R.id.buttonRegister);
         toLoginButton = findViewById(R.id.buttonToLogin);
 
+        Data = new Database(this,"Data.sqlite",null,2);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              String user = id.getText().toString();
+                String username = name.getText().toString();
+                String psd = password.getText().toString();
                 if(id.getText().toString().equals("")||name.getText().toString().equals("")||password.getText().toString().equals("")||confirmpassword.getText().toString().equals("")) {
                     ErrorConfirm.setText("Fields aren't empty");
                     ErrorConfirm.setTextColor(Color.RED);
@@ -49,10 +57,13 @@ public class Register extends AppCompatActivity {
                     ErrorPassword.setText("Password confirmation must match the password");
                     ErrorPassword.setTextColor(Color.RED);
                 }else{
+
+
                     if(checkRegister(id.getText().toString())==true) {
                         ErrorConfirm.setText("Successful registration");
                         ErrorConfirm.setTextColor(Color.GREEN);
-                        Data.QueryData("INSERT INTO User VALUES(" + id.getText().toString() + "," + password.getText().toString() + "," + name.getText().toString() + ");");
+                        Data.QueryData("INSERT INTO User(ID,Password,Name) VALUES ('"+user+"','"+username+"','"+psd+"')");
+                      // Data.QueryData("INSERT INTO User VALUES(" + id.getText().toString() + "," + password.getText().toString() + "," + name.getText().toString() + ");");
                         SaveResultData(name.getText().toString());
                         Intent intent = new Intent(Register.this, Menu.class);
                         startActivity(intent);
@@ -83,5 +94,6 @@ public class Register extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("Name",name);
         editor.apply();
-    }
 }
+    }
+
