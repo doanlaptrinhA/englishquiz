@@ -146,6 +146,8 @@ public class Level extends AppCompatActivity{
                 sendData("Easy",easylist,intent,bundle);
             }
         });
+
+
         buttonMedium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -199,6 +201,8 @@ public class Level extends AppCompatActivity{
             }
         });
     }
+
+
     public void getListByLevel(int level, ArrayList list){
         Cursor data = Data.GetData("SELECT * FROM Question WHERE DoKho =" + level +";");
         while(data.moveToNext()){
@@ -206,10 +210,12 @@ public class Level extends AppCompatActivity{
             list.add(question);
         }
     }
-    public void sendData(String level, ArrayList list,Intent intent, Bundle bundle){
+
+    public void sendData(String level, ArrayList list,Intent intent,Bundle bundle){
         intent.putExtra("level",level);
         bundle.putSerializable("ArrayList",(Serializable)list);
         intent.putExtra("QuestionList",bundle);
         startActivity(intent);
     }
+
 }

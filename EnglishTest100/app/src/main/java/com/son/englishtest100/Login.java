@@ -37,7 +37,11 @@ public class Login extends AppCompatActivity {
         Data = new Database(this,"Data.sqlite",null,2);
 //        Data.QueryData("DROP TABLE User");
         Data.QueryData("CREATE TABLE IF NOT EXISTS User(STT INTEGER PRIMARY KEY AUTOINCREMENT, ID STRING, Password STRING, Name STRING)");
+<<<<<<< HEAD
 
+=======
+        Data.QueryData("INSERT INTO User(ID,Password,Name) VALUES ('111','111','Long')");
+>>>>>>> cf6d0dfb8a08be2f6b1bc3c9da29cf4b36f501f7
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

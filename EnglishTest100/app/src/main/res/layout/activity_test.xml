@@ -23,7 +23,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@null"
-            android:textSize="33dp"
+            android:textSize="25dp"
             android:textColor="#ffffff"
             />
 
@@ -44,7 +44,7 @@
                 android:text="A. "
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="27dp" />
+                android:textSize="17dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonB"
@@ -55,7 +55,7 @@
                 android:text="B. "
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
-                android:textSize="27dp" />
+                android:textSize="17dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonC"
@@ -68,7 +68,7 @@
                 android:textColorHighlight="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textColorLink="@android:color/white"
-                android:textSize="27dp" />
+                android:textSize="17dp" />
 
             <RadioButton
                 android:id="@+id/radioButtonD"
@@ -81,15 +81,15 @@
                 android:textColorHighlight="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textColorLink="@android:color/white"
-                android:textSize="27dp" />
+                android:textSize="17dp" />
 
         </RadioGroup>
 
 
         <ImageView
             android:id="@+id/cancelbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
@@ -97,10 +97,22 @@
             app:srcCompat="@drawable/remove" />
 
 
-        <ImageView
+        <ImageButton
             android:id="@+id/buttonNext"
-            android:layout_width="95dp"
+
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="39dp"
+            android:layout_marginRight="7dp"
+
+          android:layout_width="95dp"
             android:layout_height="82dp"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
             android:layout_below="@id/radioGroup"
             android:layout_alignParentRight="true"
             android:layout_marginTop="30dp"
