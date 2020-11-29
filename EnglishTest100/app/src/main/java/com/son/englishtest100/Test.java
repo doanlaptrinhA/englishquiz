@@ -37,6 +37,7 @@ public class Test extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+
         textDokho = findViewById(R.id.textDokho);
         textSocauhoi = findViewById(R.id.textSocauhoi);
         textCauhoi = findViewById(R.id.textCauhoi);

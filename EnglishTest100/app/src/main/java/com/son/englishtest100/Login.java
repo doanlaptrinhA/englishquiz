@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -36,10 +37,11 @@ public class Login extends AppCompatActivity {
         Data = new Database(this,"Data.sqlite",null,2);
 //        Data.QueryData("DROP TABLE User");
         Data.QueryData("CREATE TABLE IF NOT EXISTS User(STT INTEGER PRIMARY KEY AUTOINCREMENT, ID STRING, Password STRING, Name STRING)");
-        Data.QueryData("INSERT INTO User(ID,Password,Name) VALUES ('111','111','Vỹ')");
+
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (id.getText().toString().equals("") || password.getText().toString().equals("")){
                     Error.setText("Fields aren't empty");
                     Error.setTextColor(Color.RED);
@@ -65,14 +67,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Login.this,Register.class);
                 startActivity(intent);
-            }
-        });
-        LoginButton.setOnTouchListener (new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                MediaPlayer mp = MediaPlayer.create(Login.this,R.raw.music1);
-                mp.start();
-                return false;
             }
         });
     }

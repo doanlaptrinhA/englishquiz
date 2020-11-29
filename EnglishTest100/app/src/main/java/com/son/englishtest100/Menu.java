@@ -2,6 +2,7 @@ package com.son.englishtest100;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accounts.Account;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Menu extends AppCompatActivity {
-    ImageView buttonTest, buttonRank, buttonReturnLogin, buttonManual, QuestionButton;
+    ImageView buttonTest, buttonRank, buttonReturnLogin, buttonManual, QuestionButton,AccountButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class Menu extends AppCompatActivity {
         buttonManual = findViewById(R.id.buttonmManual);
         buttonReturnLogin = findViewById(R.id.buttonReturnLogin);
         QuestionButton= findViewById(R.id.QuestionButton);
+        AccountButton = findViewById(R.id.AccountButton);
 
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,13 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Menu.this,Instruction.class);
+                startActivity(intent);
+            }
+        });
+        AccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menu.this, Account.class);
                 startActivity(intent);
             }
         });
