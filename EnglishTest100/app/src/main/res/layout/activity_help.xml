@@ -8,60 +8,49 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="404dp"
-        android:layout_height="399dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-        <RelativeLayout
-            android:id="@+id/layouthelp"
-            android:layout_width="401dp"
-            android:layout_height="60dp"
-            tools:ignore="MissingConstraints">
 
-            <ImageView
-                android:id="@+id/next"
-                android:layout_width="54dp"
-                android:layout_height="41dp"
-                android:padding="10dp"
-                android:src="@drawable/previous" />
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:padding="10dp"
+            android:src="@drawable/previous" />
+        <ImageView
+            android:layout_below="@id/next"
+            android:id="@+id/Tutorial"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
 
-            <ImageView
-                android:id="@+id/Img"
-                android:layout_width="52dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/next"
-                android:src="@drawable/hd1" />
-
-            <ImageView
-                android:id="@+id/Tutorial"
-                android:layout_width="248dp"
-                android:layout_height="43dp"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@id/Img"
-                android:padding="5dp"
-                android:src="@drawable/hdsd" />
-
-        </RelativeLayout>
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:src="@drawable/hdsd"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/Dautien"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/layouthelp"
+            android:layout_below="@id/Tutorial"
             android:padding="5dp"
             android:text="Đầu tiên sau khi khởi động ứng dụng thì ........................................................................................................................................................................................................"
             android:textColor="#38B6FF"
-            android:textSize="12dp"
-            tools:ignore="NotSibling" />
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
 
         <ImageView
             android:id="@+id/Img2"
-            android:layout_width="383dp"
-            android:layout_height="217dp"
+            android:layout_width="453dp"
+            android:layout_height="200dp"
             android:layout_below="@+id/Dautien"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:padding="5dp"
             android:src="@drawable/img1" />
 

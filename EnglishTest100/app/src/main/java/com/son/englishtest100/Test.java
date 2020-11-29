@@ -4,12 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
+<<<<<<< HEAD
+=======
+import android.content.SharedPreferences;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
+import android.os.Build;
+>>>>>>> a31e62659ed9602e198558efbfa76878dc7f3ad1
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,13 +34,13 @@ public class Test extends AppCompatActivity{
     int pos=0;
     int ketqua = 0;
     int HighScore=0;
-
+    SoundPool soundPool;
+    private static MediaPlayer MediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-
         textDokho = findViewById(R.id.textDokho);
         textSocauhoi = findViewById(R.id.textSocauhoi);
         textCauhoi = findViewById(R.id.textCauhoi);
@@ -80,8 +91,50 @@ public class Test extends AppCompatActivity{
                 } else Display(pos);
             }
         });
-    }
 
+
+        optA.setOnTouchListener (new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                mp.start();
+                return false;
+            }
+        });
+        optB.setOnTouchListener (new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                mp.start();
+                return false;
+            }
+        });
+        optC.setOnTouchListener (new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                mp.start();
+                return false;
+            }
+        });
+        optD.setOnTouchListener (new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                mp.start();
+                return false;
+            }
+        });
+        nextBtn.setOnTouchListener (new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.click);
+                mp.start();
+                return false;
+            }
+        });
+
+    }
     void Display(int i){
         textCauhoi.setText(test.get(i).CauHoi);
         optA.setText(test.get(i).AnswerA);
