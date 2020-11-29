@@ -95,14 +95,14 @@
             android:layout_marginRight="10dp" />
 
 
-        <ImageView
+        <ImageButton
             android:id="@+id/buttonNext"
-            android:layout_width="69dp"
-            android:layout_height="68dp"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
             android:layout_below="@id/radioGroup"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginRight="7dp"
             app:srcCompat="@drawable/checkmark"
             tools:ignore="NotSibling" />
 
