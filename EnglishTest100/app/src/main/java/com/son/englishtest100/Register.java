@@ -18,8 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-    SQLiteDatabase db;
-    SQLiteOpenHelper Helper;
     EditText name, id, password, confirmpassword;
     TextView ErrorName, ErrorID, ErrorPassword, ErrorConfirm;
     Button registerButton, toLoginButton;
@@ -65,7 +63,7 @@ public class Register extends AppCompatActivity {
                         ErrorConfirm.setText("Successful registration");
                         ErrorConfirm.setTextColor(Color.GREEN);
                         Data.QueryData("INSERT INTO User(ID,Password,Name) VALUES ('"+user+"','"+username+"','"+psd+"')");
-                      //  Data.QueryData("INSERT INTO User VALUES(" + id.getText().toString() + "," + password.getText().toString() + "," + name.getText().toString() + ");");
+                      // Data.QueryData("INSERT INTO User VALUES(" + id.getText().toString() + "," + password.getText().toString() + "," + name.getText().toString() + ");");
                         SaveResultData(name.getText().toString());
                         Intent intent = new Intent(Register.this, Menu.class);
                         startActivity(intent);
