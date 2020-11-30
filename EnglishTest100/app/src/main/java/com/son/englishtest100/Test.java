@@ -32,9 +32,8 @@ public class Test extends AppCompatActivity {
     ArrayList<Question> test = new ArrayList<>();
     int pos = 0;
     int ketqua = 0;
-    int HighScore = 0;
-    SoundPool soundPool;
-    private static MediaPlayer MediaPlayer;
+    int length;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +50,7 @@ public class Test extends AppCompatActivity {
         optD = findViewById(R.id.radioButtonD);
         cancel=findViewById(R.id.cancelbutton);
 
-        final MediaPlayer mp = MediaPlayer.create(Test.this,R.raw.music2);
+        mp = MediaPlayer.create(Test.this,R.raw.music2);
         mp.start();
         mp.setLooping(true);
 
@@ -194,6 +193,21 @@ public class Test extends AppCompatActivity {
 ////        editor.putInt("H",HighScore);
 ////        editor.apply();
 //    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.pause();
+        length = mp.getCurrentPosition();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mp.seekTo(length);
+        mp.start();
+        mp.setLooping(true);
+    }
 
 
 }

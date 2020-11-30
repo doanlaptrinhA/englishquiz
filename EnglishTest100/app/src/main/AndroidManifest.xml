@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"
-        android:icon="@mipmap/quiz"
-        android:label="EnglishQuiz"
-        android:roundIcon="@mipmap/quiz"
+        android:icon="@drawable/hoasen"
+        android:label="Quiz Application"
+        android:roundIcon="@drawable/hoasen"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
         <activity

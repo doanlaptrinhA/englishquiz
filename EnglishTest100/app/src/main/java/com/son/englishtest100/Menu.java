@@ -14,6 +14,9 @@ import android.content.DialogInterface;
 
 public class Menu extends AppCompatActivity {
     ImageView buttonTest, buttonRank, buttonReturnLogin,QuestionButton,AccountButton;
+    MediaPlayer mp;
+    int length;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +28,9 @@ public class Menu extends AppCompatActivity {
         QuestionButton= findViewById(R.id.QuestionButton);
         AccountButton = findViewById(R.id.AccountButton);
 
-
-        final MediaPlayer mp = MediaPlayer.create(Menu.this,R.raw.music8);
-            mp.start();
-            mp.setLooping(true);
+        mp = MediaPlayer.create(Menu.this,R.raw.music8);
+        mp.start();
+        mp.setLooping(true);
 
         //Click
         buttonTest.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +65,7 @@ public class Menu extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mp.reset();
                         mp.stop();
+                        finish();
                         System.exit(0);
                     }
                 });
@@ -142,7 +145,22 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-
-
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.pause();
+        length = mp.getCurrentPosition();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mp.seekTo(length);
+        mp.start();
+        mp.setLooping(true);
+    }
+
+
 }
