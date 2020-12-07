@@ -17,11 +17,12 @@
         <TextView
             android:layout_below="@id/txtCauHoi"
             android:id="@+id/textCauhoi"
-            android:layout_width="357dp"
+            android:layout_width="match_parent"
             android:layout_height="135dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:paddingTop="10dp"
             android:background="@null"
             android:textSize="25dp"
             android:textColor="#ffffff"

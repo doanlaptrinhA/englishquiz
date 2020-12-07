@@ -1,8 +1,11 @@
-package com.son.englishtest100;
+package android.doan.quizapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -34,6 +37,9 @@ public class Register extends AppCompatActivity {
         toLoginButton = findViewById(R.id.buttonToLogin);
         Data = new Database(this,"Data.sqlite",null,2);
 
+        final AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
+        final Dialog dialog = builder.create();
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +63,6 @@ public class Register extends AppCompatActivity {
                         ErrorConfirm.setText("Successful registration");
                         ErrorConfirm.setTextColor(Color.GREEN);
                         Data.QueryData("INSERT INTO User(ID,Password,Name) VALUES ('"+user+"','"+psd+"','"+username+"')");
-//                      Data.QueryData("INSERT INTO User VALUES(" + id.getText().toString() + "," + password.getText().toString() + "," + name.getText().toString() + ");");
                         SaveResultData(name.getText().toString(),id.getText().toString());
                         Intent intent = new Intent(Register.this, Menu.class);
                         startActivity(intent);
@@ -83,6 +88,8 @@ public class Register extends AppCompatActivity {
             return false;
         }else return true;
     }
+
+
     void SaveResultData(String name,String id){
         SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

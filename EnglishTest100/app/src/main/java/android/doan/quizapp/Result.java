@@ -1,20 +1,30 @@
-package com.son.englishtest100;
+package android.doan.quizapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Result extends AppCompatActivity {
-    Button btnEnd;
+    Button btnEnd,btnTest;
     TextView textName, textLevel, textResult, textTotal;
     Database Data;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,7 @@ public class Result extends AppCompatActivity {
         textLevel = findViewById(R.id.textLevel);
         textResult = findViewById(R.id.textResult);
         textTotal = findViewById(R.id.totaltxt);
+        btnTest = findViewById(R.id.btnTest);
 
         Data = new Database(this, "Data.sqlite", null, 2);
         final MediaPlayer mp = MediaPlayer.create(Result.this,R.raw.success_sound);
@@ -60,6 +71,8 @@ public class Result extends AppCompatActivity {
 
         Data.QueryData("CREATE TABLE IF NOT EXISTS QuizScore(STT INTEGER PRIMARY KEY AUTOINCREMENT, ID STRING, Level STRING, Score FLOAT);");
         Data.QueryData("INSERT INTO QuizScore(ID,Level,Score) VALUES" + "('" + test + "','" + test2 + "','" + total2 + "');");
+
+
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,25 +82,56 @@ public class Result extends AppCompatActivity {
             }
         });
 
+        //AskedQuestion
+        Intent list = getIntent();
+        Bundle packagefromCaller2 = list.getBundleExtra("Question");
+        List<String> listCollection = new ArrayList<String>();
+//        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listCollection);
+//        listRank.setAdapter(adapter);
+
+        //GetAskedQuestion
+        ArrayList listAskedQuestion;
+        listAskedQuestion = packagefromCaller2.getParcelableArrayList("askedlist");
+        //GetCorrectAnswer
+        ArrayList listAskedCorrectAnswer;
+        listAskedCorrectAnswer = packagefromCaller2.getParcelableArrayList("correct");
+        //GetYourAnswer
+        ArrayList listAskedYourAnswer;
+        listAskedYourAnswer = packagefromCaller2.getParcelableArrayList("answered");
+
+        for(int i=0;i<listAskedQuestion.size();i++) {
+            String question = listAskedQuestion.get(i).toString();
+            String correct = listAskedCorrectAnswer.get(i).toString();
+            String ans = listAskedYourAnswer.get(i).toString();
+            String mixed = "Question " + (i+1) +": " + question + "\n" + "Correct Answer: " + correct + "\n" + "Your Answer: " + ans + "\n";
+            listCollection.add(mixed);
+        }
+
+        //LoadToDialog
+        final AlertDialog.Builder builder = new AlertDialog.Builder(Result.this);
+        builder.setTitle("View Details Asked Question");
+        String [] items = listCollection.toArray(new String[0]);
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+
+            }
+        });
+        builder.setPositiveButton("Close",new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int item) {
+                dialog.dismiss();
+            }
+        });
+        final Dialog dialog = builder.create();
+
+
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+            }
+        });
+
     }
 
-//    @Override
-//    protected void onStop () {
-//        super.onStop();
-//        SharedPreferences sharedPreferences2 = getSharedPreferences("Insert", Context.MODE_PRIVATE);
-//        final String test = sharedPreferences2.getString("test", null);
-//        final String test2 = sharedPreferences2.getString("test2", null);
-//        final String total2 = sharedPreferences2.getString("total2", null);
-//
-//    }
-//
-//    public void SaveDB(String test,String test2,String total2){
-//        SharedPreferences sharedPreferences = getSharedPreferences("Insert", Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//        editor.putString("test",test);
-//        editor.putString("test2",test2);
-//        editor.putString("total2",total2);
-//        editor.apply();
-//    }
 
 }

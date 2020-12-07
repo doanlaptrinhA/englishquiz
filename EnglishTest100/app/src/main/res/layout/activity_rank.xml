@@ -11,40 +11,27 @@
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:layout_marginTop="50dp"
-            android:id="@+id/rankingtext"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="RANKING"
-            android:textSize="30dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            android:layout_gravity="center_horizontal" />
+            android:layout_marginTop="10dp"
+            android:background="#38b6FF"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonReturnMenu"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/listviewRank"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-
-            android:text="Return"
-            android:textSize="25dp"
-            android:background="@drawable/buttonstyle"
-            android:textColor="#38b6FF"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            />
+        <ImageView
+            android:id="@+id/rankingimg"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/buttonReturnMenu"
+            android:layout_gravity="center"
+            android:src="@drawable/rankingimg" />
 
     <ListView
         android:id="@+id/listviewRank"
-        android:layout_below="@id/rankingtext"
-        android:layout_width="313dp"
-        android:layout_height="329dp"
+        android:layout_below="@id/rankingimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="40dp"
@@ -55,5 +42,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+            <Button
+                android:id="@+id/buttonReturnMenu"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listviewRank"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Return"
+                android:textSize="25dp"
+                android:background="@drawable/buttonstyle"
+                android:textColor="#38b6FF"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

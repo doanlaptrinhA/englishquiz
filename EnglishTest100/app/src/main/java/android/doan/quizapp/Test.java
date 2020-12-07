@@ -1,4 +1,4 @@
-package com.son.englishtest100;
+package android.doan.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +22,12 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Test extends AppCompatActivity {
     TextView textDokho, textSocauhoi, textCauhoi;
@@ -34,6 +39,9 @@ public class Test extends AppCompatActivity {
     int ketqua = 0;
     int length;
     MediaPlayer mp;
+    final ArrayList askedlist = new ArrayList();
+    final ArrayList correctans = new ArrayList();
+    final ArrayList answeredlist = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,24 +100,40 @@ public class Test extends AppCompatActivity {
         Bundle bundle = callerIntent.getBundleExtra("RandomQuestionList");
         test = (ArrayList<Question>) bundle.getSerializable("RandomArrayList");
 
-//        LoadHighScore();
         Display(pos);
+
+
+
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int idCheck = RG.getCheckedRadioButtonId();
+                askedlist.add(test.get(pos).CauHoi);
+                correctans.add(test.get(pos).Answer);
                 switch (idCheck) {
                     case R.id.radioButtonA:
-                        if (test.get(pos).Answer.compareTo("A") == 0) ketqua = ketqua + 1;
+                        answeredlist.add(optA.getText().toString());
+                        if (optA.getText().toString().compareTo(test.get(pos).Answer) ==0){
+                            ketqua = ketqua + 1;
+                        }
                         break;
                     case R.id.radioButtonB:
-                        if (test.get(pos).Answer.compareTo("B") == 0) ketqua = ketqua + 1;
+                        answeredlist.add(optB.getText().toString());
+                        if (optB.getText().toString().compareTo(test.get(pos).Answer) ==0){
+                            ketqua = ketqua + 1;
+                        }
                         break;
                     case R.id.radioButtonC:
-                        if (test.get(pos).Answer.compareTo("C") == 0) ketqua = ketqua + 1;
+                        answeredlist.add(optC.getText().toString());
+                        if (optC.getText().toString().compareTo(test.get(pos).Answer) ==0){
+                            ketqua = ketqua + 1;
+                        }
                         break;
                     case R.id.radioButtonD:
-                        if (test.get(pos).Answer.compareTo("D") == 0) ketqua = ketqua + 1;
+                        answeredlist.add(optD.getText().toString());
+                        if (optD.getText().toString().compareTo(test.get(pos).Answer) ==0){
+                            ketqua = ketqua + 1;
+                        }
                         break;
                 }
                 pos++;
@@ -117,9 +141,14 @@ public class Test extends AppCompatActivity {
                     mp.stop();
                     Intent intent = new Intent(Test.this, Result.class);
                     Bundle bundle = new Bundle();
+                    Bundle askedquestion = new Bundle();
+                    askedquestion.putParcelableArrayList("askedlist",askedlist);
+                    askedquestion.putParcelableArrayList("correct",correctans);
+                    askedquestion.putParcelableArrayList("answered",answeredlist);
                     bundle.putInt("KQ", ketqua);
                     bundle.putInt("Socau", pos);
                     intent.putExtra("MyPackage", bundle);
+                    intent.putExtra("Question", askedquestion);
                     startActivity(intent);
                     finish();
                 } else {
@@ -127,6 +156,7 @@ public class Test extends AppCompatActivity {
                 }
             }
         });
+
 
 
         optA.setOnTouchListener(new View.OnTouchListener() {
@@ -174,25 +204,18 @@ public class Test extends AppCompatActivity {
 
     void Display(int i) {
         textCauhoi.setText(test.get(i).CauHoi);
-        optA.setText(test.get(i).AnswerA);
-        optB.setText(test.get(i).AnswerB);
-        optC.setText(test.get(i).AnswerC);
-        optD.setText(test.get(i).AnswerD);
+        ArrayList<String> mixed  = new ArrayList<>();
+        mixed.add(test.get(i).AnswerA);
+        mixed.add(test.get(i).AnswerB);
+        mixed.add(test.get(i).AnswerC);
+        mixed.add(test.get(i).AnswerD);
+        Collections.shuffle(mixed);
+        optA.setText(mixed.get(0));
+        optB.setText(mixed.get(1));
+        optC.setText(mixed.get(2));
+        optD.setText(mixed.get(3));
         RG.clearCheck();
     }
-//    void LoadHighScore(){
-//        SharedPreferences sharedPreferences = getSharedPreferences("MyData",
-//                Context.MODE_PRIVATE);
-//        if (sharedPreferences !=null){
-//            HighScore = sharedPreferences.getInt("H",0);
-//        }
-//    }
-//    void SaveHighScore(){
-//        SharedPreferences sharedPreferences = getSharedPreferences("MyData",Context.MODE_PRIVATE);
-////        SharedPreferences.Editor editor = sharedPreferences.edit();
-////        editor.putInt("H",HighScore);
-////        editor.apply();
-//    }
 
     @Override
     protected void onPause() {
@@ -208,6 +231,10 @@ public class Test extends AppCompatActivity {
         mp.start();
         mp.setLooping(true);
     }
+
+
+
+
 
 
 }

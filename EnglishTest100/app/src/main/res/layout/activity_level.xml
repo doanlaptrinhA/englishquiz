@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/levelbackgrond"
-    tools:context=".Login">
+    tools:context=".Level">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#38b6FF"
-        android:clickable="true">
+        android:background="#38b6FF">
 
         <ImageView
             android:id="@+id/nextbtn"
@@ -23,89 +23,67 @@
 
         <ImageView
             android:id="@+id/Imglogo"
-            android:layout_width="423dp"
-            android:layout_height="261dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
             android:layout_gravity="center"
-            android:src="@drawable/hoasen"
-            android:layout_below="@id/nextbtn"/>
+            android:src="@drawable/catlogo"
+            android:layout_below="@id/nextbtn"
+            android:layout_marginBottom="10dp"/>
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Imglogo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="13dp"
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Imglogo"
-            >
+            android:background="#38b6FF"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/buttonEasy"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10pt"
-                android:src="@drawable/one" />
-
-            <TextView
-                android:id="@+id/txtone"
-                android:layout_width="249dp"
+            <Button
+                android:id="@+id/btnEasy"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/teststar2"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/buttonstyle"
                 android:text="Easy"
-                android:textColor="#ffffff"
-                android:textSize="30dp"
+                android:textColor="#38b6FF"
+                android:textSize="20dp"
                 android:textStyle="bold" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout1"
-            >
-            <ImageView
-                android:id="@+id/buttonMedium"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10pt"
-                android:src="@drawable/hand" />
-
-            <TextView
-                android:id="@+id/txttwo"
-                android:layout_width="275dp"
+            <Button
+                android:id="@+id/btnMedium"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="13dp"
-                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/twostars"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttonstyle"
                 android:text="Medium"
-                android:textColor="#ffffff"
-                android:textSize="30dp"
+                android:textColor="#38b6FF"
+                android:textSize="20dp"
                 android:textStyle="bold" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout2"
-            >
-            <ImageView
-                android:id="@+id/buttonHard"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="10pt"
-                android:src="@drawable/three" />
 
-            <TextView
-                android:id="@+id/txtthree"
-                android:layout_width="251dp"
+            <Button
+                android:id="@+id/btnHard"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/threestars"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttonstyle"
                 android:text="Hard"
-                android:textColor="#ffffff"
-                android:textSize="30dp"
+                android:textColor="#38b6FF"
+                android:textSize="20dp"
                 android:textStyle="bold" />
-        </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>>
 
     </RelativeLayout>
 

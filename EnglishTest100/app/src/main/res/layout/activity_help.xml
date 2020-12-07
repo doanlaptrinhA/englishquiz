@@ -35,10 +35,11 @@
             android:layout_centerInParent="true"
             android:padding="5dp"
             android:src="@drawable/hdsd"
-            android:text="Intrustion"
+            android:text="Quiz Instruction"
             android:textColor="#38b6FF"
             android:textSize="30dp"
             android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/Dautien"
@@ -48,7 +49,7 @@
             android:layout_marginRight="20dp"
             android:layout_below="@id/Tutorial"
             android:padding="5dp"
-            android:text="When you start the application, they have the following functions:"
+            android:text="When you start the application,which have the following functions:"
             android:textColor="#38B6FF"
             android:textSize="18dp" />
 
@@ -57,7 +58,7 @@
             android:layout_width="700dp"
             android:layout_height="400dp"
             android:layout_below="@+id/Dautien"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
             android:src="@drawable/new_help" />
 
@@ -69,7 +70,7 @@
             android:layout_marginRight="20dp"
             android:layout_below="@id/Img2"
             android:padding="5dp"
-            android:text="+ At button 1, you can see the instructions for use \n + At button 2, you can view personal information and log out at any time "
+            android:text="+ At button 1, you can see the instruction for use \n + At button 2, you can view personal information and log out at any time "
             android:textColor="#38B6FF"
             android:textSize="18dp" />
 
@@ -78,9 +79,9 @@
             android:layout_width="700dp"
             android:layout_height="400dp"
             android:layout_below="@+id/Help"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
-            android:src="@drawable/help_four" />
+            android:src="@drawable/help_account" />
         <TextView
             android:id="@+id/Help2"
             android:layout_width="wrap_content"
@@ -97,9 +98,9 @@
             android:layout_width="700dp"
             android:layout_height="400dp"
             android:layout_below="@+id/Help2"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
-            android:src="@drawable/help_two" />
+            android:src="@drawable/help_level" />
         <TextView
             android:id="@+id/Help3"
             android:layout_width="wrap_content"
@@ -117,15 +118,17 @@
             android:layout_width="700dp"
             android:layout_height="400dp"
             android:layout_below="@+id/Help3"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
-            android:src="@drawable/help_three" />
+            android:src="@drawable/help_rank" />
+
         <TextView
             android:id="@+id/Help4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_below="@id/help_rank"
             android:padding="5dp"
             android:text="+ Finally, button 5 is the exit button of the application"

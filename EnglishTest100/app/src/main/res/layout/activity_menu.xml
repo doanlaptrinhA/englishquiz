@@ -70,7 +70,7 @@
             android:layout_width="103dp"
             android:layout_height="91dp"
             android:layout_below="@id/buttonTest"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="40dp"
             android:src="@drawable/emblem"
             app:layout_constraintStart_toStartOf="parent" />
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/buttonRank"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="2dp"
             android:text="HighScore"
             android:textStyle="bold"

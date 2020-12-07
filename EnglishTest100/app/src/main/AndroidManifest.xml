@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.son.englishtest100">
+    package="android.doan.quizapp">
 
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true"
-        android:icon="@drawable/hoasen"
+        android:icon="@drawable/doglogo"
         android:label="Quiz Application"
-        android:roundIcon="@drawable/hoasen"
+        android:roundIcon="@drawable/doglogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
         <activity
