@@ -12,38 +12,53 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
         <activity
-            android:name=".Register"
+            android:name=".QuizRegister"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".QuizLogin"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Menu"
+            android:name=".QuizDashboard"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Result"
+            android:name=".TestResult"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Test"
+            android:name=".QuizTest"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Random"
+            android:name=".LoadingQuestions"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Level"
+            android:name=".LoadingLevel"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Rank"
+            android:name=".QuizRank"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Instruction"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Account"
+            android:name=".Information"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Welcome"
+            android:name=".LessonsMenu"
+            android:screenOrientation="portrait"/>
+        <activity
+        android:name=".LessonsGrammar"
+        android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LessonsVocabulary"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LessonsSpeaking"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LessonsTrick"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LoadingWelcome"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

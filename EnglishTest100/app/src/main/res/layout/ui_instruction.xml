@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rela_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageView
+                android:id="@+id/nextbtn"
+                android:layout_width="91dp"
+                android:layout_height="87dp"
+                android:padding="10dp"
+                android:src="@drawable/previous" />
+
+            <TextView
+                android:id="@+id/Tutorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nextbtn"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:src="@drawable/hdsd"
+                android:text="Quiz Instruction"
+                android:textColor="#38b6FF"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/Dautien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tutorial"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:text="When you use this app ,it has the following functions:"
+                android:textColor="#38B6FF"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/Img2"
+                android:layout_width="700dp"
+                android:layout_height="400dp"
+                android:layout_below="@+id/Dautien"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:src="@drawable/new_help" />
+
+            <TextView
+                android:id="@+id/Help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Img2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:text="+ At button 1, you can see the instruction for use \n + At button 2, you can view personal information, learn your lessons and log out at any time "
+                android:textColor="#38B6FF"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/help_account"
+                android:layout_width="700dp"
+                android:layout_height="400dp"
+                android:layout_below="@+id/Help"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:src="@drawable/help_acc" />
+
+            <TextView
+                android:id="@+id/Help2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help_account"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:text="+ At button 3, you can choose the level, number of questions and take a quiz  "
+                android:textColor="#38B6FF"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/help_play"
+                android:layout_width="700dp"
+                android:layout_height="400dp"
+                android:layout_below="@+id/Help2"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:src="@drawable/help_update3" />
+
+            <TextView
+                android:id="@+id/Help3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help_play"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:text="+ At button 4, you can see the ranking of the accounts with the highest scores"
+                android:textColor="#38B6FF"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/help_rank"
+                android:layout_width="700dp"
+                android:layout_height="400dp"
+                android:layout_below="@+id/Help3"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:src="@drawable/help_rank" />
+
+            <TextView
+                android:id="@+id/Help4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help_rank"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:text="+ Finally, button 5 is the exit button of the application"
+                android:textColor="#38B6FF"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

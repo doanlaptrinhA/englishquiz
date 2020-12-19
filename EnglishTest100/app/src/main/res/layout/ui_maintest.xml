@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6FF"
+    tools:context=".QuizTest">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#38b6FF"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textCauhoi"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@id/txtCauHoi"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/questioframe"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="#38b6ff"
+            android:textSize="22dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCauhoi"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:buttonTint="#38b6ff"
+                android:padding="10dp"
+                android:text="A. "
+                android:textColor="#38b6ff"
+                android:textColorHint="#38b6ff"
+                android:textSize="17dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstyle"
+                android:buttonTint="#38b6ff"
+                android:padding="10dp"
+                android:text="B. "
+                android:textColor="#38b6ff"
+                android:textColorHint="#38b6ff"
+                android:textSize="17dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstyle"
+                android:buttonTint="#38b6ff"
+                android:padding="10dp"
+                android:text="C. "
+                android:textColor="#38b6ff"
+                android:textColorHint="#38b6ff"
+                android:textSize="17dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstyle"
+                android:buttonTint="#38b6ff"
+                android:padding="10dp"
+                android:text="D. "
+                android:textColor="#38b6ff"
+                android:textColorHint="#38b6ff"
+                android:textSize="17dp" />
+
+        </RadioGroup>
+
+
+        <ImageView
+            android:id="@+id/cancelbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/remove" />
+
+
+        <TextView
+            android:id="@+id/txtDoKho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cancelbutton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Level:"
+            android:textColor="#FFFFFF"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtCauHoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDoKho"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Question:"
+            android:textColor="#FFFFFF"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textDokho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cancelbutton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtDoKho"
+            android:textColor="#FFFFFF"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/textSocauhoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDokho"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/txtCauHoi"
+            android:textColor="#FFFFFF"
+            android:textSize="23dp"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageView
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/radioGroup"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/checkmark"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

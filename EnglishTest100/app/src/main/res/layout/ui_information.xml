@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6FF"
+    tools:context=".Information">
+
+    <RelativeLayout
+        android:id="@+id/relativelout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:padding="10dp"
+            android:src="@drawable/previous" />
+
+        <ImageView
+            android:id="@+id/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/next"
+            android:layout_gravity="center"
+            android:src="@drawable/accountimg" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AccountButton"
+            android:layout_marginLeft="15dp"
+            android:gravity="start"
+            android:text="Name:"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtUsernameID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="Username:"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AccountButton"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/txtName"
+            android:text="Duong Bao Long"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/UsernameID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtUsernameID"
+            android:text="Duong Bao Long"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtUsernameID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#38b6FF"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonLessons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UsernameID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonstyle"
+                android:text="MY LESSONS"
+                android:textColor="#38b6FF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonLessons"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/buttonstyle"
+                android:text="Log out"
+                android:textColor="#38b6FF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38b6FF"
+    tools:context=".LessonsMenu">
+
+    <RelativeLayout
+        android:id="@+id/relativelout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="86dp"
+            android:layout_height="85dp"
+            android:padding="10dp"
+            android:src="@drawable/previous" />
+
+        <ImageView
+            android:id="@+id/imgLessons"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/next"
+            android:layout_gravity="center"
+            android:src="@drawable/lessonslogo" />
+
+        <Button
+            android:id="@+id/buttonGrammar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgLessons"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonstyle"
+            android:text="Grammar"
+            android:textColor="#38b6FF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonVocabulary"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonGrammar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Vocabulary"
+            android:textColor="#38b6FF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonSpeaking"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonVocabulary"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonstyle"
+            android:text="SPEAKING"
+            android:textColor="#38b6FF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonTrick"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonSpeaking"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonstyle"
+            android:text="EASY TRICKS"
+            android:textColor="#38b6FF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
